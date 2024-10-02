@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Longest Bridges in America</title>
+
+
+    <!--draw a map of US using leaflet js-->
+    <!--make sure page looks nice and components are appropriate for size-->
+    <!-- use data from assignment to draw one bridge for each of 5 icons-->
+    <!---->
+    
+    <!-- leaflet css link-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+
+    <!-- leaflet JS link -->
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+
+    <!-- above is leaflet resources and below are our resources -->
+
+    <!-- link in our own style sheet -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+
+    <!-- create link for bridge js -->
+    <script async defer src="bridges.js"></script>
+
+</head>
+<body>
+
+    <h1>Map of the Longest Bridges in the US</h1>
+
+    <!-- empty div element, leaflet will draw map inside-->
+    <!-- by default, 0 pixel tall, as wide as page - horizontal line by default-->
+    <!-- use CSS to set the height and width of this div-->
+     <div id="bridge-map"></div>
+
+
+
+
+
+</body>
+</html>
