@@ -31,7 +31,7 @@ name: 'golden tacoma bridge',
 city: 'taiwanko'
  span: '1234m',
  locaiton: [35, -600]
- }
+ }   g
 
  { 
 name: 'smelly tacoma bridge',
