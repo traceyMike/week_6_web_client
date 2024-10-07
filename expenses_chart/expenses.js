@@ -15,7 +15,7 @@ let expenseChart = new Chart(ctx, { // add a doughnut chart
         datasets: [
             {
             data: [], // empty array //numbers in chart
-            backgroundColors: [] // empty array
+            backgroundColor: [] // empty array
             }
         ],
         labels: [] // empty labels array //labels are things in chart
@@ -37,6 +37,17 @@ function addExpenseToChart(name, amount) {
     expenseChart.data.labels.push(name)
     expenseChart.data.datasets[0].data.push(amount) // looking for data array 
     
+    // add color to chart
+    // above is the letChartColors which will allow colors to add to chart when data is added
+    // it then cycles back to beginning color
+    // create array to keep track of color count
+    let colorCount = expenseChart.data.datasets[0].backgroundColor.length
+    // create variable color, % is like division gives back only the remainder
+    // color count gets scaled between 0 and the number of colorChart colors
+    let color = chartColors[ colorCount % chartColors.length ]
+    // push new color onto end of colors array
+    expenseChart.data.datasets[0].backgroundColor.push(color)
+
     expenseChart.update()
 }
 
@@ -81,3 +92,13 @@ addExpenseButton.addEventListener('click', function() {
 
 // TODO add event listener to click the Add Expense button when the enter key is pressed 
 // let user press enter to update expenses
+
+// press enter to add an expense
+window.addEventListener('keyup', function() {
+    if (event.keyCode === 13) {
+        let inputElements = [expenseNameInput, expenseAmountInput, addExpenseButton]
+        if ( inputElements.includes(document.activeElement) ) {
+            addExpenseButton.click() // will add expense button
+        }
+    }
+})
