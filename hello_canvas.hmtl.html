@@ -22,10 +22,39 @@
         <script>
             let canvas = document.querySelector('#canvas')
             let context = canvas.getContext('2d') // this is what does drawing
-            // then ask context to draw wharever you need
-            context.fillRect(120, 20, 50, 200)
+            
+            // line from top left to bottom right hand corner
+            context.beginPath()
+            context.moveTo(10, 10)
+            context.lineTo(450, 450)
+            context.lineTo(400, 30)
+            context.lineTo(10, 10)
 
-            context.strokeRect(200, 300, 100, 150)
+            context.lineWidth = 30
+            context.strokeStyle = 'purple'
+
+            context.stroke()
+
+            
+            // then ask context to draw wharever you need
+            // fillRect - fills in shapes
+            context.fillRect(120, 20, 50, 200) 
+
+            context.fillRect(344, 22, 555, 666)
+
+            // first two coordinates top left corner, and size of rectangle
+            // draw a rectangle outline
+            context.fillStyle = 'red'
+            context.strokeRect(100, 100, 100, 100)
+            context.strokeStyle = 'green'
+            context.lineWidth = 20
+            context.strokeRect(22, 22, 22, 22)
+
+            CONTEXT.FILLsTYLE = 'yellow'
+            context.fillRect(220, 100, 150, 150)
+            context.strokeStyle = 'blue'
+            context.lineWidth = 5
+            context.strokeRect(66, 10990, 150, 150)
         </script>
 
 

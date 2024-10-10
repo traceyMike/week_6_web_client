@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    <!-- title for page -->
+     <title>Longest US Bridges Map</title>
+
+     <!-- link for the chart.js -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        
+    <!-- leaflet css link-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+
+    <!-- leaflet JS link -->
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+
+            <!-- canvas for chart -->
+    <canvas id="bridges-chart" width="400" height="200"></canvas>
+    <!--add chart.js file-->
+    <script src="Chart.js"></script>
+
+    <!-- stylesheet link -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <!-- create link for bridge js -->
+    <!-- async defer - tells script to wait until page has loaded -->
+    <script async defer src="bridge.js"></script>
+    </head>
+    
+    <body>
+    <h1>Longest US Bridges</h1>
+    
+    <div id="bridges-map" style="width: 100%; height: 600px;"></div> <!--set up map dimensions-->
+
+
+
+
+
+    </body>
+</html>
