@@ -99,6 +99,7 @@ window.addEventListener('keyup', function() {
         let inputElements = [expenseNameInput, expenseAmountInput, addExpenseButton]
         if ( inputElements.includes(document.activeElement) ) {
             addExpenseButton.click() // will add expense button
+            expenseNameInput.focus() // just add expense type info when pressing enter do not need amount
         }
     }
 })

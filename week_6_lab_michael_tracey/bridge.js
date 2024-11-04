@@ -17,7 +17,7 @@ let bridgelist = [ // initialize bridgelist array with all 5 bridges
 
 // create icon for all bridges which are not the longest bridge
 var bridgeIcon = L.icon({
-    iconUrl: 'images/golden-gate-bridge.png', // path to bridge icon
+    iconUrl: 'golden-gate-bridge.png', // path to bridge icon
     iconSize: [38, 38], //icon size
     iconAnchor: [19, 38], // anchor point for correct placement
     popupAnchor: [0, -38] // position popup above the icon
@@ -25,7 +25,7 @@ var bridgeIcon = L.icon({
 
 // create icon for the longest bridge with longest-bridge.png
 var longestBridgeIcon = L.icon({
-    iconUrl: 'images/longest-bridge.png',
+    iconUrl: 'longest-bridge.png', // make sure name is same as in directory - no long path link 
     iconSize: [38, 38],
     iconAnchor: [19, 38],
     popupAnchor: [0, -38]
